@@ -7,7 +7,10 @@ split = int(input('How many people will be splitting the bill?'))
 
 #4 Display how much the tip will be
 tip_amount = round(bill * (tip_percentage / 100),2)
-print(f'The amount to tip is {tip_amount}')
+tip_amount_formatted = "{:.2f}".format(tip_amount)
+print(f'The amount to tip is ${tip_amount_formatted}')
 #5 Display how much each person will have to pay
 individual_bill = (bill + tip_amount) / split
-print(f'Each Person has to pay: ${individual_bill}')
+#to Format it so you always display two decimals you do this
+final_amount = "{:.2f}".format(individual_bill)
+print(f'Each Person has to pay: ${final_amount}')
